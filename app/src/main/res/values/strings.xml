@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ToDo</string>
+    <string name="add_task_fab_description">A button to add a new task</string>
+    <string name="add_task_editText_hint">Add a new task</string>
+    <string name="add_task_button">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_select_all">Select all</string>
+</resources>
