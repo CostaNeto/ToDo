@@ -14,5 +14,4 @@
         android:title="@string/menu_select_all"
         app:showAsAction="ifRoom"/>
 
-
 </menu>

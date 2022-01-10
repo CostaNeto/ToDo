@@ -1,7 +1,13 @@
 package com.costaneto.todo;
 
 public interface RecyclerViewInterface {
-    void onItemLongClicked(int position, String task);
+
+    // Checkbox actions
     void updateTaskStatus(String task, int status);
-//    void deleteTask(String task);
+
+    // Selecting items for deletion
+    void startSelection(int position);
+    void selectTask(int position);
+
+
 }

@@ -19,20 +19,19 @@ public class DatabaseManager {
     }
 
     // Opening the database
-    public DatabaseManager open() throws SQLDataException {
+    public void open() throws SQLDataException {
         dbHelper =  new DatabaseHelper(context);
         database = dbHelper.getWritableDatabase();
-        return this;
     }
 
-    public void insert(String task, int status) {
+    public void insertTask(String task, int status) {
         ContentValues contentValues = new ContentValues();
         contentValues.put(DatabaseHelper.TASK_TEXT, task);
         contentValues.put(DatabaseHelper.TASK_STATUS, status);
         database.insert(DatabaseHelper.DATABASE_TABLE, null, contentValues);
     }
 
-    public Cursor fetchAll() {
+    public Cursor fetchAllTasks() {
         String[] columns = new String[] {DatabaseHelper.TASK_ID, DatabaseHelper.TASK_TEXT, DatabaseHelper.TASK_STATUS};
         Cursor cursor = database.query(DatabaseHelper.DATABASE_TABLE, columns, null, null, null, null, null);
         if (cursor != null)
@@ -40,7 +39,7 @@ public class DatabaseManager {
         return cursor;
     }
 
-    public Cursor fetchSingle() {
+    public Cursor fetchSingleTask() {
         String[] columns = new String[] {DatabaseHelper.TASK_ID, DatabaseHelper.TASK_TEXT};
         Cursor cursor = database.query(DatabaseHelper.DATABASE_TABLE, columns, null, null, null, null, null);
         if (cursor != null)
@@ -48,16 +47,16 @@ public class DatabaseManager {
         return cursor;
     }
 
-    public void updateStatus(String task, int status) {
+    public void updateTaskStatus(String task, int status) {
         ContentValues contentValues = new ContentValues();
         contentValues.put(DatabaseHelper.TASK_STATUS, status);
         database.update(DatabaseHelper.DATABASE_TABLE, contentValues,"task_text=?", new String[]{task});
-        Log.e("TASK_STATUS_UPDATED", "TASK_TEXT > " + task + "  |  NEW_STATUS > " + status);
+        Log.e("TASK_STATUS_UPDATED", "task_text > " + task + "  |  new_status > " + status);
 
     }
 
-    public void delete(String task) {
+    public void deleteTask(String task) {
         database.delete(DatabaseHelper.DATABASE_TABLE, "task_text=?", new String[]{task});
-        Log.e("TASK_DELETED", "TASK_TEXT > " + task);
+        Log.e("TASK_DELETED", "task_text > " + task);
     }
 }

@@ -11,7 +11,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     static final int DATABASE_VERSION = 1;
 
     static final String DATABASE_TABLE = "USERS";
-    static final String TASK_ID = "_ID";
+    static final String TASK_ID = "_id";
     static final String TASK_TEXT = "task_text";
     static final String TASK_STATUS = "task_status";
 

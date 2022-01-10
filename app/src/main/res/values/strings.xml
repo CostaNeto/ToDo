@@ -6,4 +6,7 @@
     <string name="cancel">Cancel</string>
     <string name="menu_delete">Delete</string>
     <string name="menu_select_all">Select all</string>
+    <string name="selected_tasks_count">0 tasks selected</string>
+    <string name="no_tasks">No tasks added</string>
+    <string name="no_task_image">Image informing there are no tasks</string>
 </resources>

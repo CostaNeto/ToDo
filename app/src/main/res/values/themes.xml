@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ToDo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.ToDo" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/yellow_3</item>
         <item name="colorPrimaryVariant">@color/yellow_3</item>
@@ -15,6 +15,7 @@
         <item name="floatingActionButtonStyle">@style/FabStyle</item>
     </style>
 
+    <!--  FloatingActionButton  -->
     <style name="FabStyle" parent="Widget.Design.FloatingActionButton">
         <item name="shapeAppearanceOverlay">@style/FabShapeStyle</item>
     </style>
@@ -22,4 +23,9 @@
     <style name="FabShapeStyle" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerSize">25%</item>
     </style>
+
+    <!--  ContextualActionBar  -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

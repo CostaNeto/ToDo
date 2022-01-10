@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/taskCardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,11 +8,15 @@
     app:cardCornerRadius="15dp"
     android:layout_marginHorizontal="16dp"
     android:layout_marginTop="4dp"
-    android:layout_marginBottom="10dp">
+    android:layout_marginBottom="10dp"
+    app:cardElevation="5dp"
+    android:clickable="true"
+    android:focusable="true">
 
     <RelativeLayout
+        android:id="@+id/taskRelativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="70dp">
+        android:layout_height="match_parent">
 
         <CheckBox
             android:id="@+id/taskCheckBox"
@@ -27,6 +32,7 @@
             android:id="@+id/taskTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:clickable="false"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/taskCheckBox"
             android:fontFamily="@font/roboto"
@@ -34,16 +40,6 @@
             app:autoSizeMaxTextSize="16sp"
             app:autoSizeTextType="uniform"
             tool:text="This task is for testing purposes" />
-
-        <RelativeLayout
-            android:id="@+id/deleteTaskRelativeLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/black_80_percent"
-            android:visibility="gone">
-
-        </RelativeLayout>
-
 
     </RelativeLayout>
 
