@@ -72,7 +72,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
         if (mainActivity.isActionMode) {
             if (taskModels.get(position).isSelected()){
                 holder.taskCardView.setCardBackgroundColor(Color.parseColor("#FFEBEBEB"));
-                holder.taskCardView.setCardElevation(2);
+                holder.taskCardView.setCardElevation(0);
             }
             else {
                 holder.taskCardView.setCardBackgroundColor(Color.WHITE);
